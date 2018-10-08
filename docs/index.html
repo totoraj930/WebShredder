@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Web Shredder</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<script src="./src/polyfill.min.js"></script>
+	<script src="./src/main.min.js"></script>
+</head>
+<body>
+
+	<div class="shredder-ctrl">
+		<div>
+			<p>Read! -> <a href="https://github.com/https://github.com/totoraj930/WebShredder/">source code</a> & <a href="https://github.com/https://github.com/totoraj930/WebShredder/blob/master/readme.md">readme.md</a></p>
+		</div>
+		<div>
+			<input type="file" accept="image/*" id="image_file">
+		</div>
+		
+			
+		<div>
+			<label for="split_num">Split num</label>
+			<input type="range" name="split_num_range" id="split_num_range" min="2" max="100">
+			<input type="number" name="split_num" id="split_num" min="2" max="100">
+		</div>
+		<div>
+			<label for="duration">Duration(s)</label>
+			<input type="range" name="duration_range" id="duration_range" min="1" max="20">
+			<input type="number" name="duration" id="duration" min="1" max="20">
+		</div>
+
+		<div>
+			<button class="js_action" data-action="toggle">Play</button>
+			<button class="js_action negative" data-action="stop">Reset</button>
+		</div>
+	</div>
+	<div class="shredder-wrap">
+		<div class="shredder">
+			<img src="./img/frame.png" alt="frame" class="frame">
+			<canvas class="shredded"></canvas>
+		</div>
+	</div>
+
+	<footer class="foot">
+		<p>&copy; 2018 totoraj.</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	line-height: 1;
+}
+body, button {
+	font-family: "Helvetica Neue", メイリオ, Meiryo, Helvetica, Arial, 游ゴシック, YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+body {
+	background: linear-gradient(
+		to bottom left,
+		#b1aea4 0%,
+		#726e60 20%,
+		#444136 50%,
+		#31302e 100%
+	);
+	color: #fff;
+}
+
+a {
+	color: #66e0ff;
+	text-decoration: none;
+}
+a:hover,
+a:focus {
+	color: #84e5fd;
+	text-decoration: underline;
+}
+
+.foot {
+	padding: 1em;
+	text-align: center;
+}
+
+button {
+	display: inline-block;
+	min-width: 100px;
+	padding: .5em 1em;
+	background: #12c7f5;
+	color: #fff;
+	border: 3px solid #12c7f5;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: pointer;
+}
+button:hover,
+button:focus {
+	background: #fff;
+	color: #12c7f5;
+}
+button:active {
+	transform: translateY(2px);
+}
+
+button.negative {
+	background: #333;
+	border-color: #333;
+}
+button.negative:hover,
+button.negative:focus {
+	background: #fff;
+	color: #333;
+}
+button.warn {
+	background: #f5163b;
+	border-color: #f5163b;
+}
+button.warn:hover,
+button.warn:focus {
+	background: #fff;
+	color: #f5163b;
+}
+
+label {
+	display: inline-block;
+	min-width: 120px;
+	vertical-align: middle;
+	text-align-last: left;
+}
+label:after {
+	content: ":";
+}
+input[type=range] {
+	display: inline-block;
+	vertical-align: middle;
+}
+input[type=number] {
+	display: inline-block;
+	width: 80px;
+	padding: 5px;
+	border: 1px solid #888;
+	vertical-align: middle;
+}
+
+.shredder-ctrl {
+	max-width: 400px;
+	margin: 1em auto;
+	text-align: center;
+}
+.shredder-ctrl > div {
+	padding: 10px;
+	border-bottom: 1px solid #888;
+}
+
+.shredder-wrap {
+	margin: 2em auto;
+	max-width: 300px;
+	width: 50vh;
+}
+.shredder {
+	position: relative;
+	width: 100%;
+	margin-bottom: 100%;
+	padding-bottom: 133.33%;
+	background-image: url("../img/frame-back.jpg");
+	background-size: cover;
+}
+.shredder .frame {
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+}
+.shredder .frame-back,
+.shredder .shredded {
+	position: absolute;
+	width: 66.66%;
+	height: auto;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
